@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblora_engine.a CMakeFiles/lora_engine.dir/src/lora_codec.c.o CMakeFiles/lora_engine.dir/src/lora_engine.c.o
-/usr/bin/ranlib liblora_engine.a

@@ -1,3 +1,0 @@
-/home/frank/STM32CubeIDE/workspace_2.0.0/lora_engine/build/CMakeFiles/lora_engine.dir
-/home/frank/STM32CubeIDE/workspace_2.0.0/lora_engine/build/CMakeFiles/edit_cache.dir
-/home/frank/STM32CubeIDE/workspace_2.0.0/lora_engine/build/CMakeFiles/rebuild_cache.dir
