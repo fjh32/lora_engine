@@ -8,6 +8,20 @@ void lora_engine_init(LoraEngine *engine, LoraDriver *driver)
     engine->driver = driver;
 }
 
+// uint8_t lora_engine_send(LoraEngine *engine,
+//                          LoraMessage *msg,
+//                          uint16_t timeout)
+//                          {
+
+//                          }
+
+// Need a lora_engine_send that is interrupt safe
+// this should queue a message for the engine's main loop to actually send over the driver
+// TODO this makes me think we may want to trigger arbitrary functions through the engine's main loop.
+// implement 2 queues, 1 for message sends and 1 for arbitrary function calls.
+// so one queue is a list of LoraMessage and other queue is list of func pointers that take a context or something
+// time to pull in ring_buffer.h
+// basically we want a lora_engine_send_async
 uint8_t lora_engine_send(LoraEngine *engine,
                          LoraMessage *msg,
                          uint16_t timeout)

@@ -52,12 +52,15 @@ typedef struct {
         COMMAND
 */
 typedef enum {
-    LORA_COMMAND_TRIGGER,
-    LORA_COMMAND_SET_VALUE
+    LORA_COMMAND_TRIGGER   = 0,
+    LORA_COMMAND_SET_VALUE = 1,
+    
+    LORA_COMMAND_WATER_ON  = 2,
+    LORA_COMMAND_WATER_OFF = 3
 } CommandType;
 
 typedef enum {
-    LORA_COMMAND_ERROR = 0,
+    LORA_COMMAND_ERROR   = 0,
     LORA_COMMAND_SUCCESS = 1
 } CommandStatus;
 
@@ -84,8 +87,8 @@ typedef struct {
             - ACK on a sequence
 */
 typedef enum {
-    LORA_STREAM_JPEG,
-    LORA_STREAM_RAW
+    LORA_STREAM_JPEG = 0,
+    LORA_STREAM_RAW  = 1
 } LoraStreamType;
 
 // Client sends this to request a stream of LoraStreamType
@@ -119,7 +122,7 @@ typedef struct {
 } LoraStreamSequence;
 
 typedef enum {
-    LORA_STREAM_STATUS_OK = 0,
+    LORA_STREAM_STATUS_OK    = 0,
     LORA_STREAM_STATUS_ERROR = 1,
 } LoraStreamStatus;
 
@@ -173,7 +176,7 @@ typedef struct {
     LoraPingResp    ping_resp;
 
     LoraDataReq     data_req;
-    LoraData    data;
+    LoraData        data;
 
     LoraCommandReq  command_req;
     LoraCommandResp command_resp;

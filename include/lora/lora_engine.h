@@ -67,6 +67,8 @@ struct _LoraEngine {
     LoraDriver *driver;
     NodeId local_id;
 
+    void *user_context; // for storing things like pins and accessing them inside the handlers
+
     LoraPingReqHandler           on_ping_req;
     LoraPingRespHandler          on_ping_resp;
 
